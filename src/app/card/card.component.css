@@ -1,0 +1,25 @@
+:host {
+    /* app-card*/
+    width: 240px;
+    display: inline-block;
+}
+.product {
+    border: 1px solid gray;
+}
+
+.product-image{
+    height: 150px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.product .product-body,
+.product .product-footer {
+    padding: 10px;
+}
+
+.product .product-footer{
+    display: flex;
+    justify-content: space-between;
+}

@@ -1,0 +1,1 @@
+ <app-card (onSelectProduct)="goToDetail($event)"  class="margin-card" [id]="product.id" [title]="product.title" [description]="product.description" [price]="product.price" [image]="product.images[0]" *ngFor="let product of products"></app-card> 

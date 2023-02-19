@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,body{
+    height: 100%;
+}
+
+body{
+    margin:0;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+.margin-card{
+   /* margin:5px 5px 5px 5px;*/
+   /*margin: 5px 5px;*/
+   margin:5px;
+}

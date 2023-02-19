@@ -1,0 +1,6 @@
+<button routerLink="/productos">Regresar</button>
+<h1>{{product.title}}</h1>
+<br>
+<p>{{product.description}}</p>
+<br>
+<img src="{{image}}" alt="" *ngFor="let image of product.images">

@@ -1,0 +1,15 @@
+<div class="product">
+    <div class="product-image"  [ngStyle]="{'background-image': 'url(' + image + ')'}">
+    
+    </div>
+    <div class="product-body">
+        <span class="product-title">{{title}}</span>
+        <p class="product-description">
+           {{description.slice(0,20)}}
+        </p>
+    </div>
+    <div class="product-footer">
+        <span>{{price}}</span>
+        <button (click)="seleccionarProducto()">Comprar</button>
+    </div>
+</div>
