@@ -1,1 +1,53 @@
-<p>perfil works!</p>
+<form [formGroup]="form" (ngSubmit)="guardar()">
+
+  <div class="wrapper-control">
+    <label for="nombre">Nombre:</label>
+    <input id="nombre" type="text" formControlName="nombre" placeholder="Ingresa el nombre">
+    <span class="campo-obligatorio" *ngIf="f.nombre?.errors?.required && (f.nombre?.dirty || f.nombre?.touched)">Campo obligatorio</span>
+    <span class="campo-obligatorio" *ngIf="f.nombre?.errors?.maxlength && (f.nombre?.dirty || f.nombre?.touched)">Tamaño maximo de 10</span>
+  </div>
+
+  <div class="wrapper-control">
+    <label for="email">Email:</label>
+    <input id="email" type="email" formControlName="email" placeholder="Ingresa el email">
+    <span class="campo-obligatorio" *ngIf="f.email?.errors?.required && (f.email?.dirty || f.email?.touched)">Campo obligatorio</span>
+    <span class="campo-obligatorio" *ngIf="f.email?.errors?.email && (f.email?.dirty || f.email?.touched)">No tiene formato de email</span>
+  </div>
+
+  <div class="wrapper-control">
+    <label for="pais">Pais</label>
+    <select id="pais" formControlName="pais">
+      <option value="1">Colombia</option>
+      <option value="2">Mexico</option>
+      <option value="3">Chile</option>
+    </select>
+    <span class="campo-obligatorio"
+          *ngIf="f.pais?.errors && (f.pais?.dirty || f.pais?.touched)">Campo obligatorio</span>
+  </div>
+
+  <div class="wrapper-control">
+    <input type="checkbox" id="aceptarTerminos" formControlName="aceptarTerminos">
+    <label for="aceptarTerminos">Aceptar terminos</label>
+    <div>
+      <span class="campo-obligatorio"
+            *ngIf="f.aceptarTerminos?.errors && (f.aceptarTerminos?.dirty || f.aceptarTerminos?.touched)">Campo obligatorio</span>
+    </div>
+  </div>
+
+  <div class="wrapper-control">
+    <input type="radio" id="hombre" [value]="1" formControlName="genero">
+    <label for="hombre">Hombre</label>
+    <input type="radio" id="mujer" [value]="2" formControlName="genero">
+    <label for="mujer">Mujer</label>
+  </div>
+
+  <div class="wrapper-control">
+    <label for="descripcion">Descripcion</label>
+    <textarea id="descripcion" formControlName="descripcion"></textarea>
+    <span class="campo-obligatorio"
+          *ngIf="f.descripcion?.errors && (f.descripcion?.dirty || f.descripcion?.touched)">Campo obligatorio</span>
+  </div>
+
+  <button [disabled]="form.invalid">Enviar</button>
+
+</form>

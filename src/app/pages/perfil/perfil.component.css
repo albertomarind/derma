@@ -1,0 +1,33 @@
+::placeholder{
+  color:gray;
+  font-size: 12px;
+}
+
+.campo-obligatorio{
+  font-size: 12px;
+  color: red;
+}
+
+.wrapper-control{
+  margin-bottom: 10px;
+}
+
+label{
+  margin-bottom: 4px;
+  display: inline-block;
+}
+
+input[type=text], input[type=email]{
+  width: 100%;
+}
+
+select{
+  width: 100%;
+}
+
+textarea{
+  width: 100%;
+  resize: none;
+}
+
+
